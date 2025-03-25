@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Menu</title>
+    <title>Pure CSS Dropdown Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <ul class="menu">
             <li><a href="#">Home</a></li>
             <li class="dropdown">
-                <a href="#">Services ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Web Development</a></li>
-                    <li class="dropdown">
-                        <a href="#">More Services ▸</a>
-                        <ul class="submenu">
-                            <li><a href="#">SEO Optimization</a></li>
-                            <li><a href="#">Graphic Design</a></li>
-                        </ul>
-                    </li>
+                <a href="#">Technology ▼</a>
+                <ul class="submenu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Cloud</a></li>
                 </ul>
             </li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector('.menu').classList.toggle('active');
-        }
-    </script>
 
 </body>
 </html>

@@ -1,148 +1,79 @@
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        .navbar {
-            background-color: #333;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
 
-        .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
 
-        .menu li {
-            position: relative;
-        }
+.menu li {
+    position: relative;
+}
 
-        .menu a {
-            text-decoration: none;
-            color: white;
-            padding: 12px 18px;
-            display: block;
-            transition: background 0.3s ease-in-out;
-        }
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    display: block;
+    transition: 0.3s;
+}
 
-        .menu a:hover {
-            background-color: #575757;
-        }
+.menu li a:hover {
+    background-color: #555;
+}
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #444;
-            min-width: 180px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 150px;
+    display: none; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
+.submenu li a {
+    padding: 10px;
+    display: block;
+    color: white;
+}
 
-        .dropdown-menu li {
-            width: 100%;
-        }
+.submenu li a:hover {
+    background-color: #666;
+}
 
-        .dropdown-menu a {
-            padding: 12px;
-            color: white;
-        }
+.dropdown:hover .submenu {
+    display: block;
+}
 
-        .dropdown-menu a:hover {
-            background-color: #575757;
-        }
 
-        .submenu {
-            position: absolute;
-            left: 100%;
-            top: 0;
-            background-color: #555;
-            min-width: 180px;
-            display: none;
-            opacity: 0;
-            transform: translateX(10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .dropdown-menu li:hover .submenu {
-            display: block;
-            opacity: 1;
-            transform: translateX(0);
-        }
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 4px 0;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .menu {
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                background-color: #333;
-                display: none;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-
-            .menu li {
-                text-align: center;
-            }
-
-            .dropdown-menu {
-                position: static;
-                width: 100%;
-                display: none;
-                opacity: 1;
-                transform: none;
-            }
-
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-
-            .submenu {
-                position: static;
-                display: none;
-                opacity: 1;
-                transform: none;
-            }
-
-            .dropdown-menu li:hover .submenu {
-                display: block;
-            }
-        }
+    .submenu {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
