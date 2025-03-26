@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
@@ -39,21 +45,22 @@ nav .logo {
     display: flex;
     gap: 15px;
     align-items: center;
+    margin-right: 40px;
 }
 
 .nav-links a {
-    color: white;
+    color: #052c65;
     text-decoration: none;
     font-size: 1.0rem;
     font-weight: bold;
-    transition: border-bottom 0.5s ease-in;
+    transition: color 0.5s ease-in;
     padding: 10px 12px;
     border-radius: 10px;
 }
 
 .nav-links a:hover {
     color: black;
-    border-bottom: 1px solid black;
+
 }
 
 main {
@@ -184,6 +191,10 @@ footer {
         width: 100%;
         padding: 10px;
         text-align: center;
+      }
+
+      .nav-links a {
+        color: white;
       }
     
       .nav-links.active {
