@@ -1,15 +1,21 @@
 body {
     display: flex;
     justify-content: center;
-    height: 100vh;
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
     align-items: center;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
 
 .card{
     width: 300px;
+    margin-right: 26px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: white;
@@ -44,4 +50,14 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns:  1fr
+    }
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns:  repeat(2, 1fr)
+    }
+}
